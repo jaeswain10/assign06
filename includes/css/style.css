@@ -1,0 +1,15 @@
+
+body {
+  background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+div {
+    text-align: left;
+  }

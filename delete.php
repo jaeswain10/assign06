@@ -48,18 +48,21 @@ $sql = "DELETE FROM income WHERE taxesWithheld =$taxesWithheld";
  mysqli_close($conn);
 
  //after savind redirect back to home page
-header('Location: index.php');
+
 
 }
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+  <link href="includes/css/style.css" rel="stylesheet">
+</head>
 <body>
   <form action="delete.php" method="post">
     <fieldset>
-      <legend> Are you sure you want to delete $incomeID;?></legend>
+      <legend> Are you sure You would like to Delete?</legend>
       <input name="incomeID" type ="hidden" value="<?php echo $incomeID;?>">
-      <buttin type="button" onclick="location='index.php'">Do Not Delete</button>
+      <button type="button" onclick="location='index.php'">Do Not Delete</button>
       </fieldset>
     </form>
   </body>

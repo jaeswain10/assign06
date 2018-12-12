@@ -3,6 +3,7 @@
  include('includes/functions.php');
 
 
+
 if(is_post_request()){
 //get post variables
 
@@ -34,14 +35,17 @@ VALUES
 mysqli_query($conn,$sql);
 //close connection
 mysqli_close($conn);
-//after saving redirect back to home page
-//header('Location:index.php');
 }
 ?>
 
+
 <html>
-<h2> Add a User</h2>
+<h1> Add a User</h1>
+<head>
+  <link href="includes/css/style.css" rel="stylesheet">
+</head>
 <body>
+  <div>
   <form action="create.php" method="post">
     <fieldset>
       <legend>1040EZ: Income tax Return for Single and Joint Filers with No Dependents</legend>
@@ -49,11 +53,11 @@ mysqli_close($conn);
   Last Name: <input type="text" name="lName"><br>
   Social Security Number: <input type="text" name"social"><br>
   Spouse's First Name : <input type="text" name="spouseFname"><br>
-   Spouse's Last name:  <input type="text" name"spouseLname"><br>
-   Spouse Social Security Number: <input type="text" name="spouseSocial"><br>
-   Wages, Salaries, and tips: <input type="text" name="wages"><br>
-   Taxable Interest: <input type="text" name ="taxableInterest"><br>
-   Are you single?:<br>
+  Spouse's Last name:  <input type="text" name"spouseLname"><br>
+  Spouse Social Security Number: <input type="text" name="spouseSocial"><br>
+  Wages, Salaries, and tips: <input type="text" name="wages"><br>
+  Taxable Interest: <input type="text" name ="taxableInterest"><br>
+  Are you single?:<br>
    <input type="radio" name="single" value="1">
    Single $10,400<br>
    <input type="radio" name="single" value="0">
@@ -67,4 +71,4 @@ Submit Form : <input type="submit" value="Submit">
 
  </fieldset>
 </form>
-<?php include('includes/footer.php');?>
+<div>

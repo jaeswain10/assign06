@@ -40,6 +40,10 @@ mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html>
+<h1> Update A User</h1>
+<head>
+  <link href="includes/css/style.css" rel="stylesheet">
+</head>
 <body>
   <form action="add.php" method="post">
     <fieldset>
